@@ -30,7 +30,6 @@ const calculateProjectedInfectedCases = (
 };
 
 export default (data) => {
-  console.log(data);
   const { reportedCases, timeToElapse, periodType } = data;
   const { mildEstimates, severeEstimates } = calculateInfectedCases(
     reportedCases
@@ -47,6 +46,7 @@ export default (data) => {
   );
 
   return {
+    ...data,
     impact: {
       currentlyInfected: mildEstimates,
       infectionsByRequestedTime: mildProjections
