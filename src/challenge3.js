@@ -68,7 +68,9 @@ export default (data, projectedDays) => {
   const {
     impact,
     severeImpact,
-    region: { avgDailyIncomeInUSD, avgDailyIncomePopulation }
+    data: {
+      region: { avgDailyIncomeInUSD, avgDailyIncomePopulation }
+    }
   } = data;
 
   const { infectionsByRequestedTime: leastProjectedInfections } = impact;

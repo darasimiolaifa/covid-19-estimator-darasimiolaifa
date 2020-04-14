@@ -68,7 +68,7 @@ export default (data, daysOfProjection) => {
   );
 
   return {
-    ...data,
+    data,
     impact: {
       currentlyInfected: mildEstimates,
       infectionsByRequestedTime: mildProjections

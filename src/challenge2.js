@@ -55,7 +55,11 @@ const calculateProjectedBedAvailability = (
  * projected amount of severe cases and available hospital beds at the future date
  */
 export default (data) => {
-  const { impact, severeImpact, totalHospitalBeds } = data;
+  const {
+    impact,
+    severeImpact,
+    data: { totalHospitalBeds }
+  } = data;
   const projectedSevereCases = calculateProjectedSevereCases(
     impact,
     severeImpact
